@@ -1,0 +1,47 @@
+{
+  "recall": {
+    "64": 0.1339248434237996,
+    "128": 0.3951635351426583,
+    "256": 0.661134307585247,
+    "512": 0.8026791927627001,
+    "1024": 0.8924495476687544,
+    "2048": 0.9448155880306194,
+    "auc": 0.6383611691022965
+  },
+  "accuracy": {
+    "rl_indomain@256": {
+      "acc": 0.564,
+      "by_type": {
+        "knowledge-update": 0.6153846153846154,
+        "multi-session": 0.37593984962406013,
+        "single-session-assistant": 0.7857142857142857,
+        "single-session-preference": 0.5333333333333333,
+        "single-session-user": 0.8428571428571429,
+        "temporal-reasoning": 0.48872180451127817
+      }
+    },
+    "rl_indomain@1024": {
+      "acc": 0.714,
+      "by_type": {
+        "knowledge-update": 0.7948717948717948,
+        "multi-session": 0.5864661654135338,
+        "single-session-assistant": 0.9464285714285714,
+        "single-session-preference": 0.6666666666666666,
+        "single-session-user": 0.9142857142857143,
+        "temporal-reasoning": 0.6015037593984962
+      }
+    }
+  },
+  "mcnemar": {
+    "256": {
+      "wins": 64,
+      "losses": 39,
+      "p": 0.017609056867909565
+    },
+    "1024": {
+      "wins": 43,
+      "losses": 27,
+      "p": 0.07223792719176259
+    }
+  }
+}

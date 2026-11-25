@@ -1,0 +1,45 @@
+{
+  "accuracy": {
+    "hybrid_top@128": 0.7056277056277056,
+    "policy_full@128": 0.7662337662337663,
+    "llm_base@128": 0.5541125541125541,
+    "llm_grpo@128": 0.7878787878787878,
+    "hybrid_top@256": 0.7792207792207793,
+    "policy_full@256": 0.8225108225108225,
+    "llm_base@256": 0.6017316017316018,
+    "llm_grpo@256": 0.8095238095238095
+  },
+  "n": 231,
+  "mcnemar": {
+    "llm_grpo_vs_hybrid_top@128": {
+      "wins": 21,
+      "losses": 2,
+      "p": 6.604194641113281e-05
+    },
+    "llm_grpo_vs_hybrid_top@256": {
+      "wins": 11,
+      "losses": 4,
+      "p": 0.11846923828125
+    },
+    "llm_grpo_vs_policy_full@128": {
+      "wins": 23,
+      "losses": 18,
+      "p": 0.5327092552361137
+    },
+    "llm_grpo_vs_policy_full@256": {
+      "wins": 13,
+      "losses": 16,
+      "p": 0.711071103811264
+    },
+    "llm_grpo_vs_llm_base@128": {
+      "wins": 67,
+      "losses": 13,
+      "p": 6.415141174951122e-10
+    },
+    "llm_grpo_vs_llm_base@256": {
+      "wins": 62,
+      "losses": 14,
+      "p": 2.3236524454068507e-08
+    }
+  }
+}

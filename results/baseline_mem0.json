@@ -1,0 +1,52 @@
+{
+  "mem0@1024": {
+    "acc": 0.862987012987013,
+    "mean_evidence_tokens": 996.2396103896103,
+    "by_category": {
+      "multi-hop": 0.7907801418439716,
+      "temporal": 0.8629283489096573,
+      "open-domain": 0.6875,
+      "single-hop": 0.9072532699167658
+    }
+  },
+  "mem0@128": {
+    "acc": 0.6058441558441559,
+    "mean_evidence_tokens": 99.96103896103897,
+    "by_category": {
+      "multi-hop": 0.41134751773049644,
+      "temporal": 0.6853582554517134,
+      "open-domain": 0.5416666666666666,
+      "single-hop": 0.6480380499405469
+    }
+  },
+  "mem0@256": {
+    "acc": 0.7175324675324676,
+    "mean_evidence_tokens": 228.00844155844155,
+    "by_category": {
+      "multi-hop": 0.5780141843971631,
+      "temporal": 0.7445482866043613,
+      "open-domain": 0.6041666666666666,
+      "single-hop": 0.7669441141498217
+    }
+  },
+  "mem0@64": {
+    "acc": 0.4025974025974026,
+    "mean_evidence_tokens": 39.18961038961039,
+    "by_category": {
+      "multi-hop": 0.2730496453900709,
+      "temporal": 0.46417445482866043,
+      "open-domain": 0.3645833333333333,
+      "single-hop": 0.4268727705112961
+    }
+  },
+  "mem0@native": {
+    "acc": 0.9071428571428571,
+    "mean_evidence_tokens": 3284.5564935064936,
+    "by_category": {
+      "multi-hop": 0.875886524822695,
+      "temporal": 0.9065420560747663,
+      "open-domain": 0.7291666666666666,
+      "single-hop": 0.9381688466111772
+    }
+  }
+}

@@ -1,0 +1,67 @@
+[project]
+name = "memctl"
+version = "0.1.0"
+description = "Budget-conditioned learned memory control for LLM agents"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Muhammed Ashiq Abdul Khader" }]
+keywords = ["llm", "agents", "memory", "reinforcement-learning", "retrieval", "token-budget"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "numpy>=1.26",
+    "torch>=2.3",
+    "sentence-transformers>=3.0",
+    "rank-bm25>=0.2.2",
+    "spacy>=3.7",
+    "networkx>=3.2",
+    "tiktoken>=0.7",
+    "openai>=1.40",
+    "python-dotenv>=1.0",
+    "tqdm>=4.66",
+]
+
+[project.urls]
+Repository = "https://github.com/AshiqAbdulkhader/Agent-Memory"
+
+[project.scripts]
+memctl-demo = "memctl.demo:main"
+
+# The spaCy model is not on PyPI; memctl downloads it on first use. Dev installs pin it for offline runs.
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl",
+]
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu124", marker = "sys_platform == 'linux'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/memctl"]
+artifacts = ["src/memctl/weights/*.pt"]  # trained policies; .gitignore otherwise hides *.pt
+
+[tool.hatch.build.targets.sdist]
+include = ["src/memctl", "tests", "README.md", "LICENSE", "pyproject.toml"]
+artifacts = ["src/memctl/weights/*.pt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

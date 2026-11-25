@@ -1,0 +1,143 @@
+{
+  "recall": {
+    "fifo+dense@2048/256": 0.06520989604100212,
+    "fifo+dense@2048/1024": 0.07058098979100212,
+    "fifo+dense@8192/256": 0.23684705099435774,
+    "fifo+dense@8192/1024": 0.26066244515566067,
+    "redundancy+hybrid_rrf@2048/256": 0.22028950853417525,
+    "redundancy+hybrid_rrf@2048/1024": 0.25980108859108836,
+    "redundancy+hybrid_rrf@8192/256": 0.4772918787564202,
+    "redundancy+hybrid_rrf@8192/1024": 0.5564910538785225,
+    "learned+learned@2048/256": 0.4119973111457668,
+    "learned+learned@2048/1024": 0.44932151914876134,
+    "learned+learned@8192/256": 0.7892331112568632,
+    "learned+learned@8192/1024": 0.8707592838479424
+  },
+  "accuracy": {
+    "fifo+dense@2048/1024": {
+      "acc": 0.14973958333333334,
+      "n": 1536,
+      "by_category": {
+        "multi-hop": 0.12411347517730496,
+        "temporal": 0.08722741433021806,
+        "open-domain": 0.33695652173913043,
+        "single-hop": 0.16171224732461356
+      }
+    },
+    "fifo+dense@2048/256": {
+      "acc": 0.14322916666666666,
+      "n": 1536,
+      "by_category": {
+        "multi-hop": 0.10638297872340426,
+        "temporal": 0.07476635514018691,
+        "open-domain": 0.33695652173913043,
+        "single-hop": 0.1605231866825208
+      }
+    },
+    "fifo+dense@8192/1024": {
+      "acc": 0.3548177083333333,
+      "n": 1536,
+      "by_category": {
+        "multi-hop": 0.35815602836879434,
+        "temporal": 0.24610591900311526,
+        "open-domain": 0.3695652173913043,
+        "single-hop": 0.3935790725326992
+      }
+    },
+    "fifo+dense@8192/256": {
+      "acc": 0.3313802083333333,
+      "n": 1536,
+      "by_category": {
+        "multi-hop": 0.3262411347517731,
+        "temporal": 0.24299065420560748,
+        "open-domain": 0.32608695652173914,
+        "single-hop": 0.36741973840665876
+      }
+    },
+    "learned+learned@2048/1024": {
+      "acc": 0.4694010416666667,
+      "n": 1536,
+      "by_category": {
+        "multi-hop": 0.4787234042553192,
+        "temporal": 0.67601246105919,
+        "open-domain": 0.4891304347826087,
+        "single-hop": 0.38525564803804996
+      }
+    },
+    "learned+learned@2048/256": {
+      "acc": 0.46875,
+      "n": 1536,
+      "by_category": {
+        "multi-hop": 0.450354609929078,
+        "temporal": 0.6853582554517134,
+        "open-domain": 0.45652173913043476,
+        "single-hop": 0.3935790725326992
+      }
+    },
+    "learned+learned@8192/1024": {
+      "acc": 0.818359375,
+      "n": 1536,
+      "by_category": {
+        "multi-hop": 0.8120567375886525,
+        "temporal": 0.8130841121495327,
+        "open-domain": 0.532608695652174,
+        "single-hop": 0.8537455410225921
+      }
+    },
+    "learned+learned@8192/256": {
+      "acc": 0.7740885416666666,
+      "n": 1536,
+      "by_category": {
+        "multi-hop": 0.6985815602836879,
+        "temporal": 0.7975077881619937,
+        "open-domain": 0.5217391304347826,
+        "single-hop": 0.8180737217598097
+      }
+    },
+    "redundancy+hybrid_rrf@2048/1024": {
+      "acc": 0.3359375,
+      "n": 1536,
+      "by_category": {
+        "multi-hop": 0.3617021276595745,
+        "temporal": 0.2803738317757009,
+        "open-domain": 0.41304347826086957,
+        "single-hop": 0.3400713436385256
+      }
+    },
+    "redundancy+hybrid_rrf@2048/256": {
+      "acc": 0.302734375,
+      "n": 1536,
+      "by_category": {
+        "multi-hop": 0.2907801418439716,
+        "temporal": 0.2897196261682243,
+        "open-domain": 0.31521739130434784,
+        "single-hop": 0.3103448275862069
+      }
+    },
+    "redundancy+hybrid_rrf@8192/1024": {
+      "acc": 0.611328125,
+      "n": 1536,
+      "by_category": {
+        "multi-hop": 0.5886524822695035,
+        "temporal": 0.5950155763239875,
+        "open-domain": 0.4782608695652174,
+        "single-hop": 0.6397146254458977
+      }
+    },
+    "redundancy+hybrid_rrf@8192/256": {
+      "acc": 0.5501302083333334,
+      "n": 1536,
+      "by_category": {
+        "multi-hop": 0.475177304964539,
+        "temporal": 0.5607476635514018,
+        "open-domain": 0.45652173913043476,
+        "single-hop": 0.5814506539833532
+      }
+    }
+  },
+  "usage": {
+    "prompt_tokens": 21473773,
+    "completion_tokens": 388868,
+    "content_filtered": {}
+  }
+}

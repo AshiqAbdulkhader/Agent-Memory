@@ -1,0 +1,83 @@
+{
+  "dense@256": {
+    "acc": 0.6482084690553745,
+    "n": 1535,
+    "by_category": {
+      "multi-hop": 0.5,
+      "temporal": 0.634375,
+      "open-domain": 0.5869565217391305,
+      "single-hop": 0.7098692033293698
+    }
+  },
+  "dense@1024": {
+    "acc": 0.8013029315960912,
+    "n": 1535,
+    "by_category": {
+      "multi-hop": 0.7340425531914894,
+      "temporal": 0.790625,
+      "open-domain": 0.6630434782608695,
+      "single-hop": 0.8430439952437574
+    }
+  },
+  "hybrid_ppr@256": {
+    "acc": 0.6990228013029316,
+    "n": 1535,
+    "by_category": {
+      "multi-hop": 0.5,
+      "temporal": 0.759375,
+      "open-domain": 0.6304347826086957,
+      "single-hop": 0.7502972651605232
+    }
+  },
+  "hybrid_ppr@1024": {
+    "acc": 0.8429967426710098,
+    "n": 1535,
+    "by_category": {
+      "multi-hop": 0.7553191489361702,
+      "temporal": 0.834375,
+      "open-domain": 0.6739130434782609,
+      "single-hop": 0.8941736028537456
+    }
+  },
+  "rl_agnostic@256": {
+    "acc": 0.755700325732899,
+    "n": 1535,
+    "by_category": {
+      "multi-hop": 0.5886524822695035,
+      "temporal": 0.765625,
+      "open-domain": 0.6195652173913043,
+      "single-hop": 0.8228299643281808
+    }
+  },
+  "rl_agnostic@1024": {
+    "acc": 0.8651465798045602,
+    "n": 1535,
+    "by_category": {
+      "multi-hop": 0.7659574468085106,
+      "temporal": 0.859375,
+      "open-domain": 0.6956521739130435,
+      "single-hop": 0.9191438763376932
+    }
+  },
+  "models": {
+    "reader": "gpt-4.1",
+    "judge": "gpt-4.1"
+  },
+  "usage": {
+    "calls": 18420,
+    "prompt_tokens": 10563063,
+    "completion_tokens": 194701,
+    "by_role": {
+      "reader": [
+        9210,
+        6877688,
+        129846
+      ],
+      "judge": [
+        9210,
+        3685375,
+        64855
+      ]
+    }
+  }
+}

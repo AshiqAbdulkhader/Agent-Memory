@@ -1,0 +1,33 @@
+{
+  "full_context@0": {
+    "acc": 0.9133550488599349,
+    "n": 1535,
+    "by_category": {
+      "multi-hop": 0.8936170212765957,
+      "temporal": 0.871875,
+      "open-domain": 0.7717391304347826,
+      "single-hop": 0.9512485136741974
+    }
+  },
+  "models": {
+    "reader": "gpt-4.1",
+    "judge": "gpt-4.1"
+  },
+  "usage": {
+    "calls": 3070,
+    "prompt_tokens": 37725576,
+    "completion_tokens": 40349,
+    "by_role": {
+      "reader": [
+        1535,
+        37103844,
+        29499
+      ],
+      "judge": [
+        1535,
+        621732,
+        10850
+      ]
+    }
+  }
+}
