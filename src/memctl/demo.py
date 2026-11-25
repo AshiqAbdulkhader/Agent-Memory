@@ -11,10 +11,20 @@ how the library behaves, it is not a benchmark (see the report for the measured 
 from __future__ import annotations
 
 import argparse
+import logging
+import os
 import sys
 from datetime import datetime
 
-from memctl import BudgetedMemory
+# Keep the screen clean for presenting: no progress bars or library warnings (set MEMCTL_VERBOSE=1 to see them).
+if not os.environ.get("MEMCTL_VERBOSE"):
+    os.environ.setdefault("HF_HUB_DISABLE_PROGRESS_BARS", "1")
+    os.environ.setdefault("TQDM_DISABLE", "1")
+    os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
+    for name in ("torch.distributed.elastic.multiprocessing.redirects", "transformers", "sentence_transformers"):
+        logging.getLogger(name).setLevel(logging.ERROR)
+
+from memctl import BudgetedMemory  # noqa: E402
 
 BOLD, DIM, GREEN, RED, BLUE, END = "\033[1m", "\033[2m", "\033[32m", "\033[31m", "\033[34m", "\033[0m"
 if not sys.stdout.isatty():
